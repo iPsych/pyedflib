@@ -1390,7 +1390,7 @@ static struct edfhdrblock * edflib_check_edf_file(FILE *inputfile, int *edf_erro
   {
     if((((unsigned char *)scratchpad)[i]<32)||(((unsigned char *)scratchpad)[i]>126))
     {
-      scratchpad)[i] = 63;
+      scratchpad[i] = 63;
     }
   }
 
@@ -1900,7 +1900,7 @@ static struct edfhdrblock * edflib_check_edf_file(FILE *inputfile, int *edf_erro
     {
       if((scratchpad[j]<32)||(scratchpad[j]>126))
       {
-	scratchpad)[i] = 63;
+	scratchpad[i] = 63;
       }
     }
     strncpy(edfhdr->edfparam[i].physdimension, edf_hdr + 256 + (edfhdr->edfsignals * 96) + (i * 8), 8);
